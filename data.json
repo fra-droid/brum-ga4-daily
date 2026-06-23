@@ -2,9 +2,9 @@
   "date": "2026-06-22",
   "generated_at": "2026-06-23T08:00:00Z",
   "metrics": [
-    { "name": "page_view",         "yesterday": 0, "avg7": 0, "avg15": 0, "avg28": 0 },
-    { "name": "session_start",     "yesterday": 0, "avg7": 0, "avg15": 0, "avg28": 0 },
-    { "name": "user_engagement",   "yesterday": 0, "avg7": 0, "avg15": 0, "avg28": 0 },
-    { "name": "initiate_checkout", "yesterday": 0, "avg7": 0, "avg15": 0, "avg28": 0 }
+    { "name": "page_view",         "yesterday": 2703, "avg7": 2857.9, "avg15": 2958.3, "avg28": 3011.7 },
+    { "name": "session_start",     "yesterday": 2027, "avg7": 2161.0, "avg15": 2234.7, "avg28": 2324.9 },
+    { "name": "user_engagement",   "yesterday": 697,  "avg7": 685.9,  "avg15": 719.1,  "avg28": 680.9  },
+    { "name": "initiate_checkout", "yesterday": 80,   "avg7": 93.7,   "avg15": 100.2,  "avg28": 88.5   }
   ]
 }
