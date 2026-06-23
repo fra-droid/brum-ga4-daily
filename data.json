@@ -1,0 +1,10 @@
+{
+  "date": "2026-06-22",
+  "generated_at": "2026-06-23T08:00:00Z",
+  "metrics": [
+    { "name": "page_view",         "yesterday": 0, "avg7": 0, "avg15": 0, "avg28": 0 },
+    { "name": "session_start",     "yesterday": 0, "avg7": 0, "avg15": 0, "avg28": 0 },
+    { "name": "user_engagement",   "yesterday": 0, "avg7": 0, "avg15": 0, "avg28": 0 },
+    { "name": "initiate_checkout", "yesterday": 0, "avg7": 0, "avg15": 0, "avg28": 0 }
+  ]
+}
