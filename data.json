@@ -1,27 +1,27 @@
 {
   "date": "2026-06-23",
-  "generated_at": "2026-06-24T06:45:42Z",
+  "generated_at": "2026-06-24T14:25:50Z",
   "metrics": [
     {
       "name": "page_view",
-      "yesterday": 3093,
-      "avg7": 2901.0,
-      "avg15": 2982.6,
-      "avg28": 3010.4
+      "yesterday": 3098,
+      "avg7": 2901.7,
+      "avg15": 2982.9,
+      "avg28": 3010.5
     },
     {
       "name": "session_start",
-      "yesterday": 2368,
-      "avg7": 2207.4,
-      "avg15": 2250.9,
-      "avg28": 2317.7
+      "yesterday": 2373,
+      "avg7": 2208.1,
+      "avg15": 2251.2,
+      "avg28": 2317.9
     },
     {
       "name": "user_engagement",
-      "yesterday": 693,
-      "avg7": 680.0,
-      "avg15": 715.6,
-      "avg28": 684.8
+      "yesterday": 694,
+      "avg7": 680.1,
+      "avg15": 715.7,
+      "avg28": 684.9
     },
     {
       "name": "initiate_checkout",
@@ -32,22 +32,22 @@
     }
   ],
   "fb_spending": {
-    "ieri": 479.36,
-    "questa_settimana": 955.37,
-    "questo_mese": 9537.59,
-    "avg7gg": 427.88,
-    "avg30gg": 424.56,
-    "scorsa_settimana": 846.38,
-    "delta_settimana": 108.99,
+    "ieri": 479.38,
+    "questa_settimana": 1401.14,
+    "questo_mese": 9537.61,
+    "avg7gg": 427.9,
+    "avg30gg": 424.6,
+    "scorsa_settimana": 1215.7,
+    "delta_settimana": 185.44,
     "scorso_mese_a_ieri": 8758.06,
-    "delta_mese": 779.53,
+    "delta_mese": 779.55,
     "forecast": {
-      "fine_settimana_ieri": 3352.17,
-      "fine_settimana_avg7": 3094.77,
-      "fine_settimana_avg30": 3078.17,
-      "fine_mese_ieri": 12893.11,
-      "fine_mese_avg7": 12532.75,
-      "fine_mese_avg30": 12509.51
+      "fine_settimana_ieri": 3318.66,
+      "fine_settimana_avg7": 3112.74,
+      "fine_settimana_avg30": 3099.54,
+      "fine_mese_ieri": 12893.27,
+      "fine_mese_avg7": 12532.91,
+      "fine_mese_avg30": 12509.81
     }
   }
 }
