@@ -30,5 +30,24 @@
       "avg15": 106.1,
       "avg28": 92.0
     }
-  ]
+  ],
+  "fb_spending": {
+    "ieri": 479.36,
+    "questa_settimana": 955.37,
+    "questo_mese": 9537.59,
+    "avg7gg": 427.88,
+    "avg30gg": 424.56,
+    "scorsa_settimana": 846.38,
+    "delta_settimana": 108.99,
+    "scorso_mese_a_ieri": 8758.06,
+    "delta_mese": 779.53,
+    "forecast": {
+      "fine_settimana_ieri": 3352.17,
+      "fine_settimana_avg7": 3094.77,
+      "fine_settimana_avg30": 3078.17,
+      "fine_mese_ieri": 12893.11,
+      "fine_mese_avg7": 12532.75,
+      "fine_mese_avg30": 12509.51
+    }
+  }
 }

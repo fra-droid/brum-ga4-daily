@@ -168,9 +168,60 @@ tbody td:first-child {
   color: var(--danger);
   font-size: 14px;
 }
+
+/* ── Page layout ── */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 720px;
+}
+
+/* ── FB Spending table ── */
+.fb-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fb-table tr td {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--lineSoft);
+}
+
+.fb-table tr:last-child td { border-bottom: none; }
+
+.fb-table tr td:first-child {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.fb-table tr td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.fb-section-header td {
+  background: #d6e4f7;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  color: #1a3a5c !important;
+  text-align: center !important;
+  letter-spacing: .3px;
+  padding: 8px 20px !important;
+}
+
+.fb-row-alt { background: #eef4fc; }
+.fb-row-plain { background: var(--white); }
+
+.fb-delta-pos { color: var(--success); font-weight: 700; }
+.fb-delta-neg { color: var(--danger); font-weight: 700; }
 </style>
 </head>
 <body>
+<div class="page">
 <div class="card" id="card">
   <div class="header">
     <div class="header-left">
@@ -189,6 +240,19 @@ tbody td:first-child {
     <button class="reload-btn" id="reload-btn" onclick="loadData()">Ricarica</button>
   </div>
 </div>
+
+<div class="card" id="fb-card">
+  <div class="header">
+    <div class="header-left">
+      <span class="brum-badge">META</span>
+      <span class="header-title">FB Spending</span>
+    </div>
+    <span class="header-date" id="fb-header-date"></span>
+  </div>
+  <div id="fb-body-slot"></div>
+</div>
+
+</div><!-- .page -->
 
 <script>
 const METRIC_LABELS = {
@@ -251,9 +315,57 @@ function renderTable(data) {
     </table>`;
 }
 
+function fmtEur(n) {
+  if (n == null || isNaN(n)) return '—';
+  return '€ ' + Number(n).toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function fmtDelta(n) {
+  if (n == null || isNaN(n)) return '—';
+  const sign = n >= 0 ? '+' : '';
+  const cls = n >= 0 ? 'fb-delta-pos' : 'fb-delta-neg';
+  return `<span class="${cls}">${sign}€ ${Math.abs(n).toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
+}
+
+function renderFbSpending(fb) {
+  const rows = [
+    { label: 'Ieri',                        val: fmtEur(fb.ieri),                alt: true },
+    { label: 'Questa settimana',             val: fmtEur(fb.questa_settimana),    alt: false },
+    { label: 'Questo mese',                  val: fmtEur(fb.questo_mese),         alt: true },
+    { label: 'Media ultimi 7gg',             val: fmtEur(fb.avg7gg),              alt: false },
+    { label: 'Media ultimi 30gg',            val: fmtEur(fb.avg30gg),             alt: true },
+    { label: 'Scorsa settimana (ad oggi)',   val: fmtEur(fb.scorsa_settimana),    alt: false },
+    { label: 'Delta (questa vs. scorsa)',    val: fmtDelta(fb.delta_settimana),   alt: true },
+    { label: 'Scorso mese (a ieri)',         val: fmtEur(fb.scorso_mese_a_ieri),  alt: false },
+    { label: 'Delta (questo vs. scorso)',    val: fmtDelta(fb.delta_mese),        alt: true },
+  ];
+  const f = fb.forecast;
+  const forecastRows = [
+    { label: 'Fine settimana',              val: fmtEur(f.fine_settimana_ieri),  alt: true },
+    { label: 'Fine settimana (media 7gg.)', val: fmtEur(f.fine_settimana_avg7),  alt: false },
+    { label: 'Fine settimana (media 30gg.)',val: fmtEur(f.fine_settimana_avg30), alt: true },
+    { label: 'Fine mese',                   val: fmtEur(f.fine_mese_ieri),       alt: false },
+    { label: 'Fine mese (media 7gg.)',      val: fmtEur(f.fine_mese_avg7),       alt: true },
+    { label: 'Fine mese (media 30gg.)',     val: fmtEur(f.fine_mese_avg30),      alt: false },
+  ];
+
+  const toRow = r => `<tr class="${r.alt ? 'fb-row-alt' : 'fb-row-plain'}">
+    <td>${r.label}</td><td>${r.val}</td></tr>`;
+
+  return `<table class="fb-table">
+    <tbody>
+      <tr class="fb-section-header"><td colspan="2">FB Spending</td></tr>
+      ${rows.map(toRow).join('')}
+      <tr class="fb-section-header"><td colspan="2">Previsto</td></tr>
+      ${forecastRows.map(toRow).join('')}
+    </tbody>
+  </table>`;
+}
+
 async function loadData() {
   const btn = document.getElementById('reload-btn');
   const slot = document.getElementById('body-slot');
+  const fbSlot = document.getElementById('fb-body-slot');
   btn.disabled = true;
   btn.textContent = '…';
 
@@ -263,7 +375,9 @@ async function loadData() {
     const data = await res.json();
 
     document.getElementById('header-date').textContent = formatDate(data.date);
+    document.getElementById('fb-header-date').textContent = formatDate(data.date);
     slot.innerHTML = renderTable(data);
+    if (data.fb_spending) fbSlot.innerHTML = renderFbSpending(data.fb_spending);
   } catch (e) {
     slot.innerHTML = `<div class="error-msg">Errore nel caricamento dei dati: ${e.message}</div>`;
   } finally {
