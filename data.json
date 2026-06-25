@@ -1,53 +1,34 @@
 {
-  "date": "2026-06-23",
-  "generated_at": "2026-06-24T14:25:50Z",
+  "date": "2026-06-24",
+  "generated_at": "2026-06-25T15:51:08Z",
   "metrics": [
     {
       "name": "page_view",
-      "yesterday": 3098,
-      "avg7": 2901.7,
-      "avg15": 2982.9,
-      "avg28": 3010.5
+      "yesterday": 3581,
+      "avg7": 3000.7,
+      "avg15": 3028.2,
+      "avg28": 3012.1
     },
     {
       "name": "session_start",
-      "yesterday": 2373,
-      "avg7": 2208.1,
-      "avg15": 2251.2,
-      "avg28": 2317.9
+      "yesterday": 2805,
+      "avg7": 2294.4,
+      "avg15": 2296.8,
+      "avg28": 2314.9
     },
     {
       "name": "user_engagement",
-      "yesterday": 694,
-      "avg7": 680.1,
-      "avg15": 715.7,
-      "avg28": 684.9
+      "yesterday": 842,
+      "avg7": 696.7,
+      "avg15": 713.3,
+      "avg28": 692.5
     },
     {
       "name": "initiate_checkout",
-      "yesterday": 172,
-      "avg7": 102.4,
-      "avg15": 106.1,
-      "avg28": 92.0
+      "yesterday": 99,
+      "avg7": 106.7,
+      "avg15": 104.5,
+      "avg28": 93.4
     }
-  ],
-  "fb_spending": {
-    "ieri": 479.38,
-    "questa_settimana": 1401.14,
-    "questo_mese": 9537.61,
-    "avg7gg": 427.9,
-    "avg30gg": 424.6,
-    "scorsa_settimana": 1215.7,
-    "delta_settimana": 185.44,
-    "scorso_mese_a_ieri": 8758.06,
-    "delta_mese": 779.55,
-    "forecast": {
-      "fine_settimana_ieri": 3318.66,
-      "fine_settimana_avg7": 3112.74,
-      "fine_settimana_avg30": 3099.54,
-      "fine_mese_ieri": 12893.27,
-      "fine_mese_avg7": 12532.91,
-      "fine_mese_avg30": 12509.81
-    }
-  }
+  ]
 }
