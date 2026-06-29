@@ -1,27 +1,27 @@
 {
   "date": "2026-06-28",
-  "generated_at": "2026-06-29T00:00:00+00:00",
+  "generated_at": "2026-06-29T08:34:19Z",
   "metrics": [
     {
       "name": "page_view",
-      "yesterday": 2454,
-      "avg7": 3198.1,
-      "avg15": 3034.1,
-      "avg28": 3009.4
+      "yesterday": 2457,
+      "avg7": 3198.6,
+      "avg15": 3034.3,
+      "avg28": 3009.5
     },
     {
       "name": "session_start",
-      "yesterday": 1917,
-      "avg7": 2444.9,
-      "avg15": 2315.0,
-      "avg28": 2298.8
+      "yesterday": 1920,
+      "avg7": 2445.3,
+      "avg15": 2315.2,
+      "avg28": 2298.9
     },
     {
       "name": "user_engagement",
-      "yesterday": 507,
-      "avg7": 726.1,
-      "avg15": 695.7,
-      "avg28": 699.4
+      "yesterday": 510,
+      "avg7": 726.6,
+      "avg15": 695.9,
+      "avg28": 699.5
     },
     {
       "name": "initiate_checkout",
