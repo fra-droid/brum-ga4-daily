@@ -1,19 +1,19 @@
 {
   "date": "2026-06-29",
-  "generated_at": "2026-06-30T07:27:56Z",
+  "generated_at": "2026-06-30T07:41:26Z",
   "metrics": [
     {
       "name": "page_view",
-      "yesterday": 2999,
-      "avg7": 3232.7,
+      "yesterday": 3000,
+      "avg7": 3232.9,
       "avg15": 3083.3,
       "avg28": 3019.5
     },
     {
       "name": "session_start",
-      "yesterday": 2267,
-      "avg7": 2473.6,
-      "avg15": 2346.6,
+      "yesterday": 2268,
+      "avg7": 2473.7,
+      "avg15": 2346.7,
       "avg28": 2302.7
     },
     {
