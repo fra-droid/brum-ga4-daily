@@ -1,34 +1,34 @@
 {
-  "date": "2026-06-29",
-  "generated_at": "2026-06-30T07:41:26Z",
+  "date": "2026-06-30",
+  "generated_at": "2026-07-01T07:23:00Z",
   "metrics": [
     {
       "name": "page_view",
-      "yesterday": 3000,
-      "avg7": 3232.9,
-      "avg15": 3083.3,
-      "avg28": 3019.5
+      "yesterday": 3397,
+      "avg7": 3307.1,
+      "avg15": 3134.2,
+      "avg28": 3064.9
     },
     {
       "name": "session_start",
-      "yesterday": 2268,
-      "avg7": 2473.7,
-      "avg15": 2346.7,
-      "avg28": 2302.7
+      "yesterday": 2578,
+      "avg7": 2523.4,
+      "avg15": 2382.3,
+      "avg28": 2331.5
     },
     {
       "name": "user_engagement",
-      "yesterday": 751,
-      "avg7": 726.7,
-      "avg15": 717.1,
-      "avg28": 705.8
+      "yesterday": 942,
+      "avg7": 776.1,
+      "avg15": 740.8,
+      "avg28": 727.1
     },
     {
       "name": "initiate_checkout",
-      "yesterday": 67,
-      "avg7": 106.1,
-      "avg15": 101.0,
-      "avg28": 94.0
+      "yesterday": 81,
+      "avg7": 92.1,
+      "avg15": 100.3,
+      "avg28": 95.4
     }
   ]
 }
